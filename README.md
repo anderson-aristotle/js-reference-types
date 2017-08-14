@@ -16,6 +16,7 @@ By the end of this, developers should be able to:
 -   Create and invoke functions
 -   Store, access, and update data values in objects and arrays
 -   Iterate through an array or object and operate on its elements
+-   Highlight the differences between reference types and primitive types in JS
 
 ## Preparation
 
