@@ -328,6 +328,9 @@ processing we've done before.  This practice is meant to be challenging.
 ### Regular expression information and utility
 
 -   [RegexOne](http://regexone.com/)
+-   [Regex used to validate email addresses in rails](https://apidock.com/rails/ActiveModel/Validations/ClassMethods/validates_format_of)
+-   [Regex for beginners](https://hackernoon.com/javascript-learn-regular-expressions-for-beginners-bb6107015d91)
+-   [Ruby regular expression tester](http://rubular.com/)
 -   [Scriptular](http://scriptular.com/)
 
 ## [License](LICENSE)
