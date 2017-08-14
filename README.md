@@ -91,12 +91,22 @@ otherPrimitive
 reference = {}
 otherReference = reference
 
+reference
+
+otherReference
+
 reference.property = 'value'
 
 reference
 
 otherReference
 ```
+
+Notice how the initial 'primitive' example does not update the value held in
+`otherPrimitive` (it remains 2). However, because we've told `otherReference` to
+*point to* `reference`, the variable `otherReference` will continue pointing to
+that object until told otherwise, and will therefore appear to have "updated"
+it's value.
 
 ### Demo: Functions
 
