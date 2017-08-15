@@ -27,7 +27,7 @@ By the end of this, developers should be able to:
 
 1.  Install dependencies with `npm install`.
 
-## Reference Types
+## Demo: Reference Types
 
 The following is true for all reference types In JavaScript:
  `refVar instanceof Object === true`.
@@ -140,7 +140,8 @@ abstraction and encapsulation.
 
 It is important to remember that console.log prints its argument to the
 `console` (the terminal using node, the console area of the debug tools using
-chrome) but does not return a value.
+chrome) but does not return a value. *THIS IS A COMMON POINT OF CONFUSION* I
+REPEAT, `console.log` does *not* return a value (it returns `undefined`).
 
 ### Code Along: Functions
 
@@ -186,13 +187,46 @@ const three = function (param1, param2, param3) {
 three(1)
 ```
 
-### Demo: Arguments and Return Values
+### Demo: Return Values and Function Syntax
 
 ```js
 const addOne = (num) => num + 1
 ```
 
-What happens when we call a function with the wrong number of arguments?
+Woah--What the heck is this `() => `??? This, my friends, is called a "Fat
+Arrow" function and is another way of writing a function in javascript.
+
+In javascript, all 3 of these functions are identical:
+```js
+const addOne = function (num) {
+  return num + 1
+}
+// is the same as
+const addOne = (num) => {
+  return num + 1
+}
+// is the same as
+const addOne = (num) => num + 1
+```
+
+The important piece to remember is when you need the `return` keyword.
+
+### Lab: Different Function Syntax
+In `bin/function-syntax-lab`, try writing these two functions the other ways:
+```js
+const youRock = function (name) {
+  return name + 'rocks!'
+}
+```
+
+Do the opposite for this:
+```js
+const square = (number) => number * number
+```
+
+### Demo: Return Values and Function Syntax
+
+Now, what happens when you call a function with the wrong number of arguments?
 
 How would you create a function with an optional argument?
 
@@ -280,7 +314,10 @@ Now try typing the following commands:
 car['year']
 car.make
 car[make]
+car.year = 2000
 ```
+
+What happened during the last command? Type `car.year` again...
 
 ### Code-Along: Analyze Text
 
