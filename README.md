@@ -108,6 +108,10 @@ Notice how the initial 'primitive' example does not update the value held in
 that object until told otherwise, and will therefore appear to have "updated"
 it's value.
 
+### Lab: Reference Types
+
+Try the above example using different variable names!
+
 ### Demo: Functions
 
 In mathematics, a function maps one or more inputs to a single output.
@@ -211,7 +215,8 @@ const addOne = (num) => num + 1
 
 The important piece to remember is when you need the `return` keyword.
 
-### Lab: Different Function Syntax
+### Lab: Return Values and Function Syntax
+
 In `bin/function-syntax-lab`, try writing these two functions the other ways:
 ```js
 const youRock = function (name) {
@@ -224,7 +229,7 @@ Do the opposite for this:
 const square = (number) => number * number
 ```
 
-### Demo: Return Values and Function Syntax
+### Demo: Arguments and Return Values
 
 Now, what happens when you call a function with the wrong number of arguments?
 
@@ -275,7 +280,7 @@ What's in a name?
 Why call an array a list?
 Why not call a dictionary an associative array?
 
-#### List (Array)
+#### Demo: List (Array)
 
 ```js
 let fibonacci = [0, 1]
@@ -284,7 +289,7 @@ for (let i = 2; i < 10; i++) {
 }
 ```
 
-#### Dictionary (Object)
+#### Demo: Dictionary (Object)
 
 ```js
 let seniorConsultant = {
