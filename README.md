@@ -352,15 +352,21 @@ One or more whitespace characters: `/\s+/`
 
 One or more non-word characters: `/\W+/`
 
-```bash
-grunt test
-```
-Note: In order to run grunt test, remove the 'x' before 'describe' on line 16 in spec/lab.spec.js
-
 ## Lab
 
 We'll use `lib/lab.js` to build functions to wrap some of the collection
 processing we've done before.  This practice is meant to be challenging.
+
+##### Test your solution
+
+Test your solution to the lab using the command:
+```bash
+grunt test
+```
+Note: In order to run `grunt test`, remove the **x** before **describe** on **line 16** in [spec/lab.spec.js](https://github.com/ga-wdi-boston/js-reference-types/spec/lab.spec.js)
+
+Completed the lab and curious about what the tests are doing?
+The tests are written in Javascript.  Take a look under the hood!
 
 ## Additional Resources
 
