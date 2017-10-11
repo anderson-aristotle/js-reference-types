@@ -217,7 +217,7 @@ The important piece to remember is when you need the `return` keyword.
 
 ### Lab: Return Values and Function Syntax
 
-In `bin/function-syntax-lab`, try writing these two functions the other ways:
+In `lib/function-syntax-lab.js`, try writing these two functions the other ways:
 ```js
 const youRock = function (name) {
   return name + 'rocks!'
