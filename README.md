@@ -364,6 +364,11 @@ The tests are written in Javascript.  Take a look under the hood!
 -   [Dictionary](https://en.wikipedia.org/wiki/Associative_array)
 -   [Hash](https://en.wikipedia.org/wiki/Hash_table)
 
+### Primitive vs Reference Types & Memory
+
+- 	[Explaining Value vs Reference](https://codeburst.io/explaining-value-vs-reference-in-javascript-647a975e12a0)
+-  [CS50 - Memory in C (Advanced) ](https://www.youtube.com/watch?v=Zn8OJMYT-gc)
+
 ### Regular expression information and utility
 
 -   [RegexOne](http://regexone.com/)
