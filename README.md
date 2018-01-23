@@ -29,20 +29,18 @@ By the end of this, developers should be able to:
 
 ## Demo: Reference Types
 
-The following is true for all reference types In JavaScript:
- `refVar instanceof Object === true`.
+Javascript has three different reference types:
 
-These three reference type are ubiquitous in JavaScript.
+- Plain Object
+- Array
+- Function
 
--   Plain Object
--   Array
--   Function
+All JavaScript reference types are technically objects, which can be represented in JavaScript like:
+ `someRefVar instanceof Object === true`.
 
-The first two are used as collections.  The last is encapsulated executable
-code.  All three can be created using reference type literals.
+`Object` and `Array` are used to hold collections.  A `Function` holds encapsulated executable code.  All three can be created using reference type literals. 
 
-The following shows the simplest examples of these types created with literal
-syntax:
+The following shows the simplest examples of these types created with literal syntax:
 
 ```js
 let list
@@ -55,7 +53,7 @@ code = function () {} // or `code = () => {}`
 ```
 
 And here is the equivalent using constructor function syntax (a topic we'll
-cover later):
+cover later. Read more about the [three ways to create objects](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_Objects#Using_object_initializers)):
 
 ```js
 list = new Array()
@@ -63,17 +61,21 @@ dictionary = new Object()
 code = new Function()
 ```
 
-The literal syntax is more common and allows for functionality unavailable with
-the constructor function syntax.
+The literal syntax is more common.
 
-You can think of each reference type as storing values.  You access the values
-stored in a function reference using invocation syntax, `code()`.  You access
-the values stored in an array using index syntax, `list[0]`.  And finally, you
-use member access to get the values from a plain object, `dictionary.name` or
+You can think of each reference type as storing values.  You **access the values stored in a function** reference using **invocation** syntax, `code()`.  
+
+You **access the values stored in an array** using index syntax, `list[0]`.  
+
+And finally, you
+**use member access to get the values from a plain object**, `dictionary.name` or
 `dictionary['name']`.
 
-A key difference between a reference and primitive type is best demonstrated
-with the following code:
+A key difference between a reference and primitive type is that a variable that holds a reference points to the object's location in memory. **When you change one reference value, you change any other variables that point to the same reference value.** 
+
+Alternativelly, when a variable holds a **primitive type**, it holds the value itself, and another variable that holds the same primitive value has no relation with any other variable that holds the same primitive value. **When you change one primitive value, it will not change the other variables that point to the same primitive value**.
+
+To see this working in Javascript, take a look at the following code:
 
 ```js
 let primitive
