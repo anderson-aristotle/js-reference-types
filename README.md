@@ -49,7 +49,7 @@ let code
 
 list = []
 dictionary = {}
-code = function () {} // or `code = () => {}`
+code = function () {}
 ```
 
 And here is the equivalent using constructor function syntax (a topic we'll
@@ -196,40 +196,18 @@ three(1)
 ### Demo: Return Values and Function Syntax
 
 ```js
-const addOne = (num) => num + 1
-```
-
-Woah--What the heck is this `() => `??? This, my friends, is called a "Fat
-Arrow" function and is another way of writing a function in javascript.
-
-In javascript, all 3 of these functions are identical:
-```js
 const addOne = function (num) {
   return num + 1
 }
-// is the same as
-const addOne = (num) => {
-  return num + 1
-}
-// is the same as
-const addOne = (num) => num + 1
 ```
 
-The important piece to remember is when you need the `return` keyword.
+The important piece to remember is that you need the `return` keyword to return a value. If you forget it or choose not to include it, the function still returns something to the caller, and it will be `undefined`. 
+
+Later on in the course, we will learn about a new method of writing functions that returns the last expression.
 
 ### Lab: Return Values and Function Syntax
 
-In `lib/function-syntax-lab.js`, try writing these two functions the other ways:
-```js
-const youRock = function (name) {
-  return name + 'rocks!'
-}
-```
-
-Do the opposite for this:
-```js
-const square = (number) => number * number
-```
+In `lib/function-syntax-lab.js`, get some practice writing functions, accepting arguments, and returning the appropriate values.
 
 ### Demo: Arguments and Return Values
 
@@ -270,7 +248,7 @@ const concatWithSpace = function (wordOne, wordTwo) {
 ### Collections
 
 There are two general collection types.  The `list` and the `dictionary` (aka
-`hashmap`, `map`, `hash`, ...).
+`hashmap`, `map`, `hash`, `associative array`...).
 
 -   Lists store lists of things.
 -   Dictionaries store uniquely named values.
