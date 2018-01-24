@@ -29,20 +29,18 @@ By the end of this, developers should be able to:
 
 ## Demo: Reference Types
 
-The following is true for all reference types In JavaScript:
- `refVar instanceof Object === true`.
+Javascript has three different reference types:
 
-These three reference type are ubiquitous in JavaScript.
+- Plain Object
+- Array
+- Function
 
--   Plain Object
--   Array
--   Function
+All JavaScript reference types are technically objects, which can be represented in JavaScript like:
+ `someRefVar instanceof Object === true`.
 
-The first two are used as collections.  The last is encapsulated executable
-code.  All three can be created using reference type literals.
+`Object` and `Array` are used to hold collections.  A `Function` holds encapsulated executable code.  All three can be created using reference type literals. 
 
-The following shows the simplest examples of these types created with literal
-syntax:
+The following shows the simplest examples of these types created with literal syntax:
 
 ```js
 let list
@@ -51,11 +49,11 @@ let code
 
 list = []
 dictionary = {}
-code = function () {} // or `code = () => {}`
+code = function () {}
 ```
 
 And here is the equivalent using constructor function syntax (a topic we'll
-cover later):
+cover later. Read more about the [three ways to create objects](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_Objects#Using_object_initializers)):
 
 ```js
 list = new Array()
@@ -63,17 +61,21 @@ dictionary = new Object()
 code = new Function()
 ```
 
-The literal syntax is more common and allows for functionality unavailable with
-the constructor function syntax.
+The literal syntax is more common.
 
-You can think of each reference type as storing values.  You access the values
-stored in a function reference using invocation syntax, `code()`.  You access
-the values stored in an array using index syntax, `list[0]`.  And finally, you
-use member access to get the values from a plain object, `dictionary.name` or
+You can think of each reference type as storing values.  You **access the values stored in a function** reference using **invocation** syntax, `code()`.  
+
+You **access the values stored in an array** using index syntax, `list[0]`.  
+
+And finally, you
+**use member access to get the values from a plain object**, `dictionary.name` or
 `dictionary['name']`.
 
-A key difference between a reference and primitive type is best demonstrated
-with the following code:
+A key difference between a reference and primitive type is that a variable that holds a reference points to the object's location in memory. **When you change one reference value, you change any other variables that point to the same reference value.** 
+
+Alternativelly, when a variable holds a **primitive type**, it holds the value itself, and another variable that holds the same primitive value has no relation with any other variable that holds the same primitive value. **When you change one primitive value, it will not change the other variables that point to the same primitive value**.
+
+To see this working in Javascript, take a look at the following code:
 
 ```js
 let primitive
@@ -194,40 +196,18 @@ three(1)
 ### Demo: Return Values and Function Syntax
 
 ```js
-const addOne = (num) => num + 1
-```
-
-Woah--What the heck is this `() => `??? This, my friends, is called a "Fat
-Arrow" function and is another way of writing a function in javascript.
-
-In javascript, all 3 of these functions are identical:
-```js
 const addOne = function (num) {
   return num + 1
 }
-// is the same as
-const addOne = (num) => {
-  return num + 1
-}
-// is the same as
-const addOne = (num) => num + 1
 ```
 
-The important piece to remember is when you need the `return` keyword.
+The important piece to remember is that you need the `return` keyword to return a value. If you forget it or choose not to include it, the function still returns something to the caller, and it will be `undefined`. 
+
+Later on in the course, we will learn about a new method of writing functions that returns the last expression.
 
 ### Lab: Return Values and Function Syntax
 
-In `lib/function-syntax-lab.js`, try writing these two functions the other ways:
-```js
-const youRock = function (name) {
-  return name + 'rocks!'
-}
-```
-
-Do the opposite for this:
-```js
-const square = (number) => number * number
-```
+In `lib/function-syntax-lab.js`, get some practice writing functions, accepting arguments, and returning the appropriate values.
 
 ### Demo: Arguments and Return Values
 
@@ -268,7 +248,7 @@ const concatWithSpace = function (wordOne, wordTwo) {
 ### Collections
 
 There are two general collection types.  The `list` and the `dictionary` (aka
-`hashmap`, `map`, `hash`, ...).
+`hashmap`, `map`, `hash`, `associative array`...).
 
 -   Lists store lists of things.
 -   Dictionaries store uniquely named values.
@@ -383,6 +363,11 @@ The tests are written in Javascript.  Take a look under the hood!
 -   [Array](https://en.wikipedia.org/wiki/Array_data_structure)
 -   [Dictionary](https://en.wikipedia.org/wiki/Associative_array)
 -   [Hash](https://en.wikipedia.org/wiki/Hash_table)
+
+### Primitive vs Reference Types & Memory
+
+- 	[Explaining Value vs Reference](https://codeburst.io/explaining-value-vs-reference-in-javascript-647a975e12a0)
+-  [CS50 - Memory in C (Advanced) ](https://www.youtube.com/watch?v=Zn8OJMYT-gc)
 
 ### Regular expression information and utility
 
