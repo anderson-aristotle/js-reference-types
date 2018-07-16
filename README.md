@@ -38,7 +38,7 @@ Javascript has three different reference types:
 All JavaScript reference types are technically objects, which can be represented in JavaScript like:
  `someRefVar instanceof Object === true`.
 
-`Object` and `Array` are used to hold collections.  A `Function` holds encapsulated executable code.  All three can be created using reference type literals. 
+`Object` and `Array` are used to hold collections.  A `Function` holds encapsulated executable code.  All three can be created using reference type literals.
 
 The following shows the simplest examples of these types created with literal syntax:
 
@@ -63,15 +63,15 @@ code = new Function()
 
 The literal syntax is more common.
 
-You can think of each reference type as storing values.  You **access the values stored in a function** reference using **invocation** syntax, `code()`.  
+You can think of each reference type as storing values.  You **access the values stored in a function** reference using **invocation** syntax, `code()`.
 
-You **access the values stored in an array** using index syntax, `list[0]`.  
+You **access the values stored in an array** using index syntax, `list[0]`.
 
 And finally, you
 **use member access to get the values from a plain object**, `dictionary.name` or
 `dictionary['name']`.
 
-A key difference between a reference and primitive type is that a variable that holds a reference points to the object's location in memory. **When you change one reference value, you change any other variables that point to the same reference value.** 
+A key difference between a reference and primitive type is that a variable that holds a reference points to the object's location in memory. **When you change one reference value, you change any other variables that point to the same reference value.**
 
 Alternativelly, when a variable holds a **primitive type**, it holds the value itself, and another variable that holds the same primitive value has no relation with any other variable that holds the same primitive value. **When you change one primitive value, it will not change the other variables that point to the same primitive value**.
 
@@ -201,7 +201,7 @@ const addOne = function (num) {
 }
 ```
 
-The important piece to remember is that you need the `return` keyword to return a value. If you forget it or choose not to include it, the function still returns something to the caller, and it will be `undefined`. 
+The important piece to remember is that you need the `return` keyword to return a value. If you forget it or choose not to include it, the function still returns something to the caller, and it will be `undefined`.
 
 Later on in the course, we will learn about a new method of writing functions that returns the last expression.
 
@@ -273,8 +273,7 @@ for (let i = 2; i < 10; i++) {
 
 ```js
 let seniorConsultant = {
-  'given name':'Antony',
-  surname:'Donovan',
+  name: 'Jessica',
   occupation: 'Senior Consultant',
 }
 let consultant = {}
@@ -287,8 +286,8 @@ our first car.
 
 ```js
 let car = {
-  'make': 'Volvo',
-  'model': '740 Turbo',
+  make: 'Volvo',
+  model: '740 Turbo',
   year: 1990
 }
 ```
