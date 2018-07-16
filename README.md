@@ -309,27 +309,8 @@ We'll be using the file `lib/collections.js` as a starting point to:
 
 -   create a list of normalized words from a paragraph of text.
 
--   count words in a string.
-
--   get the unique words from a string.
-
--   count the unique words.
-
 -   find the word frequencies (how many times does each unique word appear in
  the string).
-
-We won't get to methods in detail until later, but there are three on String
-we'll need to create a list of normalized words:  `split`, which breaks a String
-into an Array;  `replace`, which makes substitutions; and `toUpperCase`, which
-does the obvious. We'll annotate our code as we go so feel free to
-raise questions if you're not sure what a particular function's
-purpose is.
-
-We'll also need two [Regular expressions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions):
-
-One or more whitespace characters: `/\s+/`
-
-One or more non-word characters: `/\W+/`
 
 ## Lab
 
@@ -367,14 +348,6 @@ The tests are written in Javascript.  Take a look under the hood!
 
 - 	[Explaining Value vs Reference](https://codeburst.io/explaining-value-vs-reference-in-javascript-647a975e12a0)
 -  [CS50 - Memory in C (Advanced) ](https://www.youtube.com/watch?v=Zn8OJMYT-gc)
-
-### Regular expression information and utility
-
--   [RegexOne](http://regexone.com/)
--   [Regex used to validate email addresses in rails](https://apidock.com/rails/ActiveModel/Validations/ClassMethods/validates_format_of)
--   [Regex for beginners](https://hackernoon.com/javascript-learn-regular-expressions-for-beginners-bb6107015d91)
--   [Ruby regular expression tester](http://rubular.com/)
--   [Scriptular](http://scriptular.com/)
 
 ## [License](LICENSE)
 
