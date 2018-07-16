@@ -52,17 +52,6 @@ dictionary = {}
 code = function () {}
 ```
 
-And here is the equivalent using constructor function syntax (a topic we'll
-cover later. Read more about the [three ways to create objects](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_Objects#Using_object_initializers)):
-
-```js
-list = new Array()
-dictionary = new Object()
-code = new Function()
-```
-
-The literal syntax is more common.
-
 You can think of each reference type as storing values.  You **access the values stored in a function** reference using **invocation** syntax, `code()`.
 
 You **access the values stored in an array** using index syntax, `list[0]`.
