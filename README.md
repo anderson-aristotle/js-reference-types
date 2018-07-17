@@ -27,7 +27,7 @@ By the end of this, developers should be able to:
 
 1.  Install dependencies with `npm install`.
 
-## Demo: Reference Types
+## Reference Types
 
 Javascript has three different reference types:
 
@@ -38,27 +38,18 @@ Javascript has three different reference types:
 All JavaScript reference types are technically objects, which can be represented in JavaScript like:
  `someRefVar instanceof Object === true`.
 
-`Object` and `Array` are used to hold collections.  A `Function` holds encapsulated executable code.  All three can be created using reference type literals.
+`Object` and `Array` are used to hold collections.
+`Function` holds encapsulated executable code.
 
-The following shows the simplest examples of these types created with literal syntax:
+All three can be created using reference type literals.  The following shows the simplest examples of these types created with literal syntax:
 
 ```js
-let list
-let dictionary
-let code
-
-list = []
-dictionary = {}
-code = function () {}
+const list = []
+const dictionary = {}
+const code = function () {}
 ```
 
-You can think of each reference type as storing values.  You **access the values stored in a function** reference using **invocation** syntax, `code()`.
-
-You **access the values stored in an array** using index syntax, `list[0]`.
-
-And finally, you
-**use member access to get the values from a plain object**, `dictionary.name` or
-`dictionary['name']`.
+### Demo: Assignment with Reference Types
 
 A key difference between a reference and primitive type is that a variable that holds a reference points to the object's location in memory. **When you change one reference value, you change any other variables that point to the same reference value.**
 
@@ -67,30 +58,21 @@ Alternativelly, when a variable holds a **primitive type**, it holds the value i
 To see this working in Javascript, take a look at the following code:
 
 ```js
-let primitive
-let otherPrimitive
-let reference
-let otherReference
-
-primitive = 2
-otherPrimitive = primitive
+// Primitives
+let primitive = 2
+let otherPrimitive = primitive
 primitive = 7
 
-primitive
-otherPrimitive
+primitive // 7
+otherPrimitive // 2
 
-reference = {}
-otherReference = reference
-
-reference
-
-otherReference
-
+// Reference Types
+let reference = {}
+let otherReference = reference
 reference.property = 'value'
 
-reference
-
-otherReference
+reference // { property: 'value'}
+otherReference // { property: 'value'}
 ```
 
 Notice how the initial 'primitive' example does not update the value held in
@@ -103,6 +85,103 @@ it's value.
 
 Try the above example using different variable names!
 
+### Demo: Arrays
+
+In Javascript to represent a list we can use an [Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array).  Elements in an `Array` or items in our list are ordered.  JavaScript arrays are zero-indexed: the first element of an array is at index 0, and the last element is at the index equal to the value of the array's length property minus 1. Using an invalid index number returns undefined.
+
+```js
+// Create an empty array literal
+const list = []
+
+// Create an array literal with values
+const anotherList = ['Nelly', 100, false, 2]
+
+// Read value from an Array, use index
+anotherList[0] // 'Nelly'
+anotherList[2] // false
+
+// Update value in an Array, use index
+anotherList[2] = true
+anotherList // ['Nelly', 100, true, 2]
+
+// Add value to an Array, use index
+anotherList[5] = 'Add Me'
+anotherList // ['Nelly', 100, true, 2, undefined, 'Add Me']
+```
+
+#### Code Along: Iterate through an Array
+
+```js
+const developers = ['Susan', 'Charlotte', 'Aaron']
+
+// Individually print message for each item in array
+console.log('Hello ' + developers[0])
+console.log('Hello ' + developers[1])
+console.log('Hello ' + developers[2])
+
+// Loop through array using i as the index
+for (let i = 0; i < developers.length; i++) {
+  console.log('Hello ' + developers[i])
+}
+```
+
+### Demo: Objects
+
+In Javascript to represent a dictionary of data with key/value pairs, we can use an [Object](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Basics).
+
+```js
+// Create an empty object literal
+const emptyDictionary = {}
+
+// Create an object literal with values
+const car = {
+  brand: 'Ford',
+  make: 'Mustang',
+  year: 1999
+}
+
+// Read value from an Object, use key
+car['brand'] // 'Ford'
+car.brand // 'Ford'
+
+// Update value in an Object, use key
+car.brand = 'Toyota'
+car // { brand: 'Toyota', make: 'Mustang', year: 1999 }
+
+// Add value to an Object, use key
+car.topSpeed = 120
+car // { brand: 'Toyota', make: 'Mustang', year: 1999, topSpeed: 120 }
+```
+
+#### Code Along: Iterating through an Object
+
+```js
+const car = {
+  brand: 'Ford',
+  make: 'Mustang',
+  year: 1999
+}
+
+// Individually print message for each property of object
+console.log(car.brand)
+console.log(car.make)
+console.log(car['year'])
+
+// Loop through object using key
+for (const key in car ){
+  console.log(car[key])
+}
+```
+
+### Code-Along: Collections
+
+We'll be using the file `lib/collections.js` as a starting point to:
+
+-   create a list of normalized words from a paragraph of text.
+
+-   find the word frequencies (how many times does each unique word appear in
+ the string).
+
 ### Demo: Functions
 
 In mathematics, a function maps one or more inputs to a single output.
@@ -111,11 +190,15 @@ JavaScript isn't that strict, allowing zero inputs or no specified output.
 
 ```js
 const five = function () {
-  return 5
+  return 2 + 3
 }
 
 const add = function (a, b) {
-  a + b
+  return a + b
+}
+
+const add = function (a, b) {
+  a + b // returns undefined, not the sum of a + b
 }
 ```
 
@@ -233,73 +316,6 @@ const concatWithSpace = function (wordOne, wordTwo) {
   return wordOne + ' ' + wordTwo
 }
 ```
-
-### Collections
-
-There are two general collection types.  The `list` and the `dictionary` (aka
-`hashmap`, `map`, `hash`, `associative array`...).
-
--   Lists store lists of things.
--   Dictionaries store uniquely named values.
-
-In JavaScript we use Array and Object respectively to implement these collection
- types.
-
-What's in a name?
-Why call an array a list?
-Why not call a dictionary an associative array?
-
-#### Demo: List (Array)
-
-```js
-let fibonacci = [0, 1]
-for (let i = 2; i < 10; i++) {
-  fibonacci[i] = fibonacci[i-1] + fibonacci[i-2]
-}
-```
-
-#### Demo: Dictionary (Object)
-
-```js
-let seniorConsultant = {
-  name: 'Jessica',
-  occupation: 'Senior Consultant',
-}
-let consultant = {}
-```
-
-#### Code-Along: Dictionary (Object)
-
-Open up Node and type the following with me as we make an object that refers to
-our first car.
-
-```js
-let car = {
-  make: 'Volvo',
-  model: '740 Turbo',
-  year: 1990
-}
-```
-
-Now try typing the following commands:
-
-```bash
-car['year']
-car.make
-car[make]
-car.year = 2000
-```
-
-What happened during the last command? Type `car.year` again...
-
-### Code-Along: Analyze Text
-
-We'll be using the file `lib/collections.js` as a starting point to:
-
--   create a list of normalized words from a paragraph of text.
-
--   find the word frequencies (how many times does each unique word appear in
- the string).
 
 ## Lab
 
