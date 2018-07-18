@@ -335,24 +335,24 @@ The tests are written in Javascript.  Take a look under the hood!
 
 ## Additional Resources
 
-### Function information
+### Objects
 
--   [Function](https://en.wikipedia.org/wiki/Function_(mathematics))
--   [Subroutine](https://en.wikipedia.org/wiki/Subroutine)
--   [Variable shadowing](http://en.wikipedia.org/wiki/Variable_shadowing)
--   [Parameter](https://en.wikipedia.org/wiki/Parameter_(computer_programming))
+-   [Object Basics](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Basics)
+-   [Working with Objects](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_Objects)
+-   [Objects JS Info](https://javascript.info/object)
 
-### Collection information
+### Arrays
+-   [Arrays Mozilla](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)
+-   [Arrays JS Info](https://javascript.info/array)
+-   [Eloquent JS: Objects and Arrays](https://eloquentjavascript.net/04_data.html)
 
--   [List](https://en.wikipedia.org/wiki/List_(abstract_data_type))
--   [Array](https://en.wikipedia.org/wiki/Array_data_structure)
--   [Dictionary](https://en.wikipedia.org/wiki/Associative_array)
--   [Hash](https://en.wikipedia.org/wiki/Hash_table)
+### Functions
+-   [Functions Mozilla](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions)
+-   [Function Basics JS Info](https://javascript.info/function-basics)
 
 ### Primitive vs Reference Types & Memory
-
 - 	[Explaining Value vs Reference](https://codeburst.io/explaining-value-vs-reference-in-javascript-647a975e12a0)
--  [CS50 - Memory in C (Advanced) ](https://www.youtube.com/watch?v=Zn8OJMYT-gc)
+-   [Copying by Reference JS Info](https://javascript.info/object#copying-by-reference)
 
 ## [License](LICENSE)
 
