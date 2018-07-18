@@ -16,7 +16,7 @@ const paragraph = // eslint-disable-line no-unused-vars
   'them to the separation'
 
 describe('collections code along', () => {
-  describe('words', ()=> {
+  describe('words', () => {
     const words = paragraph.split(' ')
 
     it('has the correct length', () => {
