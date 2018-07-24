@@ -6,20 +6,30 @@ const expect = chai.expect
 
 const collections = require('../lib/collections.js')
 
-describe('collections', () => {
+const paragraph = // eslint-disable-line no-unused-vars
+  'When in the Course of human events it becomes necessary for one ' +
+  'people to dissolve the political bands which have connected them ' +
+  'with another and to assume among the powers of the earth the ' +
+  'separate and equal station to which the Laws of Nature and of ' +
+  'Natures God entitle them a decent respect to the opinions of ' +
+  'mankind requires that they should declare the causes which impel ' +
+  'them to the separation'
+
+describe('collections code along', () => {
+  describe('words', () => {
+    const words = paragraph.split(' ')
+
+    it('has the correct length', () => {
+      expect(collections.words.length).to.equal(71)
+    })
+
+    it('matches expected array', () => {
+      expect(collections.words).to.deep.equal(words)
+    })
+  })
+
   describe('normalized words', () => {
-    const normalizedWords = [
-      'WHEN', 'IN', 'THE', 'COURSE', 'OF', 'HUMAN', 'EVENTS', 'IT',
-      'BECOMES', 'NECESSARY', 'FOR', 'ONE', 'PEOPLE', 'TO', 'DISSOLVE',
-      'THE', 'POLITICAL', 'BANDS', 'WHICH', 'HAVE', 'CONNECTED', 'THEM',
-      'WITH', 'ANOTHER', 'AND', 'TO', 'ASSUME', 'AMONG', 'THE',
-      'POWERS', 'OF', 'THE', 'EARTH', 'THE', 'SEPARATE', 'AND', 'EQUAL',
-      'STATION', 'TO', 'WHICH', 'THE', 'LAWS', 'OF', 'NATURE', 'AND',
-      'OF', 'NATURES', 'GOD', 'ENTITLE', 'THEM', 'A', 'DECENT',
-      'RESPECT', 'TO', 'THE', 'OPINIONS', 'OF', 'MANKIND', 'REQUIRES',
-      'THAT', 'THEY', 'SHOULD', 'DECLARE', 'THE', 'CAUSES', 'WHICH',
-      'IMPEL', 'THEM', 'TO', 'THE', 'SEPARATION'
-    ]
+    const normalizedWords = paragraph.split(' ').map(word => word.toUpperCase())
 
     it('has the correct length', () => {
       expect(collections.normalizedWords.length).to.equal(71)
@@ -27,27 +37,6 @@ describe('collections', () => {
 
     it('matches expected array', () => {
       expect(collections.normalizedWords).to.deep.equal(normalizedWords)
-    })
-  })
-
-  describe('unique words', () => {
-    const uniqueWords = [
-      'WHEN', 'IN', 'THE', 'COURSE', 'OF', 'HUMAN', 'EVENTS', 'IT',
-      'BECOMES', 'NECESSARY', 'FOR', 'ONE', 'PEOPLE', 'TO', 'DISSOLVE',
-      'POLITICAL', 'BANDS', 'WHICH', 'HAVE', 'CONNECTED', 'THEM',
-      'WITH', 'ANOTHER', 'AND', 'ASSUME', 'AMONG', 'POWERS', 'EARTH',
-      'SEPARATE', 'EQUAL', 'STATION', 'LAWS', 'NATURE', 'NATURES',
-      'GOD', 'ENTITLE', 'A', 'DECENT', 'RESPECT', 'OPINIONS', 'MANKIND',
-      'REQUIRES', 'THAT', 'THEY', 'SHOULD', 'DECLARE', 'CAUSES',
-      'IMPEL', 'SEPARATION'
-    ]
-
-    it('has the correct length', () => {
-      expect(collections.uniqueWords.length).to.equal(49)
-    })
-
-    it('matches expected array', () => {
-      expect(collections.uniqueWords).to.deep.equal(uniqueWords)
     })
   })
 
