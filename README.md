@@ -147,36 +147,36 @@ const emptyDictionary = {}
 
 // Create an object literal with values
 const car = {
-  brand: 'Ford',
-  make: 'Mustang',
+  make: 'Ford',
+  model: 'Mustang',
   year: 1999
 }
 
 // Read value from an Object, use key
-car['brand'] // 'Ford'
-car.brand // 'Ford'
+car['make'] // 'Ford'
+car.make // 'Ford'
 
 // Update value in an Object, use key
-car.brand = 'Toyota'
-car // { brand: 'Toyota', make: 'Mustang', year: 1999 }
+car.make = 'Toyota'
+car // { make: 'Toyota', model: 'Mustang', year: 1999 }
 
 // Add value to an Object, use key
 car.topSpeed = 120
-car // { brand: 'Toyota', make: 'Mustang', year: 1999, topSpeed: 120 }
+car // { make: 'Toyota', model: 'Mustang', year: 1999, topSpeed: 120 }
 ```
 
 #### Code Along: Iterating through an Object
 
 ```js
 const car = {
-  brand: 'Ford',
-  make: 'Mustang',
+  make: 'Ford',
+  model: 'Mustang',
   year: 1999
 }
 
 // Individually print message for each property of object
-console.log(car.brand)
 console.log(car.make)
+console.log(car.model)
 console.log(car['year'])
 
 // Loop through object using key
