@@ -29,7 +29,7 @@ describe('lab', () => {
   })
 
   describe('unique words', () => {
-    const uniqueWords = ["WHEN", "IN", "THE", "COURSE", "OF", "HUMAN", "EVENTS", "IT", "BECOMES", "NECESSARY", "FOR", "ONE", "PEOPLE", "TO", "DISSOLVE", "POLITICAL", "BANDS", "WHICH", "HAVE", "CONNECTED", "THEM", "WITH", "ANOTHER", "AND", "ASSUME", "AMONG", "POWERS", "EARTH", "SEPARATE", "EQUAL", "STATION", "LAWS", "NATURE", "NATURES", "GOD", "ENTITLE", "A", "DECENT", "RESPECT", "OPINIONS", "MANKIND", "REQUIRES", "THAT", "THEY", "SHOULD", "DECLARE", "CAUSES", "IMPEL", "SEPARATION"]
+    const uniqueWords = ['WHEN', 'IN', 'THE', 'COURSE', 'OF', 'HUMAN', 'EVENTS', 'IT', 'BECOMES', 'NECESSARY', 'FOR', 'ONE', 'PEOPLE', 'TO', 'DISSOLVE', 'POLITICAL', 'BANDS', 'WHICH', 'HAVE', 'CONNECTED', 'THEM', 'WITH', 'ANOTHER', 'AND', 'ASSUME', 'AMONG', 'POWERS', 'EARTH', 'SEPARATE', 'EQUAL', 'STATION', 'LAWS', 'NATURE', 'NATURES', 'GOD', 'ENTITLE', 'A', 'DECENT', 'RESPECT', 'OPINIONS', 'MANKIND', 'REQUIRES', 'THAT', 'THEY', 'SHOULD', 'DECLARE', 'CAUSES', 'IMPEL', 'SEPARATION']
 
     it('has the correct length', () => {
       expect(collFuncs.getUniqueWords(paragraph).length).to.equal(49)
