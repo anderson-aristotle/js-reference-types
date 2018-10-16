@@ -6,7 +6,7 @@ Exercising the JavaScript Reference Types.
 
 ## Prerequisites
 
--   [ga-wdi-boston/js-basics](https://git.generalassemb.ly/ga-wdi-boston/js-basics)
+-   [ga-wdi-boston/js](https://git.generalassemb.ly/ga-wdi-boston/js)
 
 ## Objectives
 
@@ -146,11 +146,11 @@ car.make // 'Ford'
 
 // Update value in an Object, use key
 car.make = 'Toyota'
-car // { brand: 'Toyota', make: 'Mustang', year: 1999 }
+car // { make: 'Toyota', model: 'Mustang', year: 1999 }
 
 // Add value to an Object, use key
 car.topSpeed = 120
-car // { brand: 'Toyota', make: 'Mustang', year: 1999, topSpeed: 120 }
+car // { make: 'Toyota', model: 'Mustang', year: 1999, topSpeed: 120 }
 ```
 
 #### Code Along: Iterating through an Object
@@ -328,7 +328,7 @@ Test your solution to the lab using the command:
 ```bash
 grunt test
 ```
-Note: In order to run `grunt test`, remove the **x** before **describe** on **line 16** in [spec/lab.spec.js](https://git.generalassemb.ly/ga-wdi-boston/js-reference-types/spec/lab.spec.js)
+Note: In order to run `grunt test`, remove the **x** before **describe** on **line 16** in [spec/lab.spec.js](spec/lab.spec.js)
 
 Completed the lab and curious about what the tests are doing?
 The tests are written in Javascript.  Take a look under the hood!
