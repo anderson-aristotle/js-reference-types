@@ -8,21 +8,17 @@ const lab = require('../lib/function-syntax-lab.js')
 
 describe('function syntax lab', () => {
   describe('youRock', () => {
-
     it('generates phrase', () => {
       expect(lab.youRock('Alyssa')).to.equal('Alyssa Rocks!')
     })
-
   })
 
   describe('square', () => {
-
     it('multiples number by self', () => {
       expect(lab.square(2)).to.equal(4)
       expect(lab.square(-1)).to.equal(1)
       expect(lab.square(5)).to.equal(25)
     })
-
   })
 
   describe('cube', () => {

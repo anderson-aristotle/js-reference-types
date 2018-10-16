@@ -6,26 +6,24 @@ Exercising the JavaScript Reference Types.
 
 ## Prerequisites
 
--   [ga-wdi-boston/js-basics](https://github.com/ga-wdi-boston/js-basics)
+- [ga-wdi-boston/js-basics](https://github.com/ga-wdi-boston/js-basics)
 
 ## Objectives
 
 By the end of this, developers should be able to:
 
--   Identify array, object, and function literals
--   Create and invoke functions
--   Store, access, and update data values in objects and arrays
--   Iterate through an array or object and operate on its elements
--   Highlight the differences between reference types and primitive types in JS
+- Identify array, object, and function literals
+- Create and invoke functions
+- Store, access, and update data values in objects and arrays
+- Iterate through an array or object and operate on its elements
+- Highlight the differences between reference types and primitive types in JS
 
 ## Preparation
 
-1.  [Fork and clone](https://github.com/ga-wdi-boston/meta/wiki/ForkAndClone)
-    this repository.
-
-1.  Create a new branch, `training`, for your work and change into it.
-
-1.  Install dependencies with `npm install`.
+1.[Fork and clone](https://github.com/ga-wdi-boston/meta/wiki/ForkAndClone)
+  this repository.
+1. Create a new branch, `training`, for your work and change into it.
+1. Install dependencies with `npm install`.
 
 ## Reference Types
 
@@ -35,13 +33,15 @@ Javascript has three different reference types:
 - Array
 - Function
 
-All JavaScript reference types are technically objects, which can be represented in JavaScript like:
+All JavaScript reference types are technically objects, which can be represented
+in JavaScript like:
  `someRefVar instanceof Object === true`.
 
 `Object` and `Array` are used to hold collections.
 `Function` holds encapsulated executable code.
 
-All three can be created using reference type literals.  The following shows the simplest examples of these types created with literal syntax:
+All three can be created using reference type literals.  The following shows the
+simplest examples of these types created with literal syntax:
 
 ```js
 const list = []
@@ -51,9 +51,16 @@ const code = function () {}
 
 ### Demo: Assignment with Reference Types
 
-A key difference between a reference and primitive type is that a variable that holds a reference points to the object's location in memory. **When you change one reference value, you change any other variables that point to the same reference value.**
+A key difference between a reference and primitive type is that a variable that
+holds a reference points to the object's location in memory. **When you change**
+**one reference value, you change any other variables that point to the same**
+**reference value.**
 
-Alternativelly, when a variable holds a **primitive type**, it holds the value itself, and another variable that holds the same primitive value has no relation with any other variable that holds the same primitive value. **When you change one primitive value, it will not change the other variables that point to the same primitive value**.
+Alternatively, when a variable holds a **primitive type**, it holds the value
+itself, and another variable that holds the same primitive value has no relation
+with any other variable that holds the same primitive value. **When you change**
+**one primitive value, it will not change the other variables that point to**
+**the same primitive value**.
 
 To see this working in Javascript, take a look at the following code:
 
@@ -87,7 +94,11 @@ Try the above example using different variable names!
 
 ### Demo: Arrays
 
-In Javascript to represent a list we can use an [Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array).  Elements in an `Array` or items in our list are ordered.  JavaScript arrays are zero-indexed: the first element of an array is at index 0, and the last element is at the index equal to the value of the array's length property minus 1. Using an invalid index number returns undefined.
+In Javascript to represent a list we can use an [Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array).
+Elements in an `Array` or items in our list are ordered.  JavaScript arrays are
+zero-indexed: the first element of an array is at index 0, and the last element
+is at the index equal to the value of the array's length property minus 1. Using
+an invalid index number returns undefined.
 
 ```js
 // Create an empty array literal
@@ -127,7 +138,8 @@ for (let i = 0; i < developers.length; i++) {
 
 ### Demo: Objects
 
-In Javascript to represent a dictionary of data with key/value pairs, we can use an [Object](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Basics).
+In Javascript to represent a dictionary of data with key/value pairs, we can use
+an [Object](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Basics).
 
 ```js
 // Create an empty object literal
@@ -177,10 +189,10 @@ for (const key in car ){
 
 We'll be using the file `lib/collections.js` as a starting point to:
 
--   create a list of normalized words from a paragraph of text.
+- create a list of normalized words from a paragraph of text.
 
--   find the word frequencies (how many times does each unique word appear in
- the string).
+- find the word frequencies (how many times does each unique word appear in
+  the string).
 
 ### Demo: Functions
 
@@ -273,13 +285,17 @@ const addOne = function (num) {
 }
 ```
 
-The important piece to remember is that you need the `return` keyword to return a value. If you forget it or choose not to include it, the function still returns something to the caller, and it will be `undefined`.
+The important piece to remember is that you need the `return` keyword to return
+a value. If you forget it or choose not to include it, the function still
+returns something to the caller, and it will be `undefined`.
 
-Later on in the course, we will learn about a new method of writing functions that returns the last expression.
+Later on in the course, we will learn about a new method of writing functions
+that returns the last expression.
 
 ### Lab: Return Values and Function Syntax
 
-In `lib/function-syntax-lab.js`, get some practice writing functions, accepting arguments, and returning the appropriate values.
+In `lib/function-syntax-lab.js`, get some practice writing functions, accepting
+arguments, and returning the appropriate values.
 
 ### Demo: Arguments and Return Values
 
@@ -300,16 +316,16 @@ concat('Hello', 'World')
 > 'HelloWorld'
 ```
 
-What's wrong with this output? What if we use numbers instead of strings when
-we invoke the function. We **could** modify this by writing the function
-invocation like this:
+What's wrong with this output? What if we use numbers instead of strings when we
+invoke the function. We **could** modify this by writing the function invocation
+like this:
 
 ```bash
 concat('Hello', ' World')
 ```
 
-This doesn't really seem like it's the way this function should work though,
-so let's go ahead and make the change to connect two words with a space.
+This doesn't really seem like it's the way this function should work though, so
+let's go ahead and make the change to connect two words with a space.
 
 ```js
 const concatWithSpace = function (wordOne, wordTwo) {
@@ -322,13 +338,16 @@ const concatWithSpace = function (wordOne, wordTwo) {
 We'll use `lib/lab.js` to build functions to wrap some of the collection
 processing we've done before.  This practice is meant to be challenging.
 
-##### Test your solution
+### Test your solution
 
 Test your solution to the lab using the command:
+
 ```bash
 grunt test
 ```
-Note: In order to run `grunt test`, remove the **x** before **describe** on **line 16** in [spec/lab.spec.js](https://github.com/ga-wdi-boston/js-reference-types/spec/lab.spec.js)
+
+Note: In order to run `grunt test`, remove the **x** before **describe** on
+**line 16** in [spec/lab.spec.js](https://github.com/ga-wdi-boston/js-reference-types/spec/lab.spec.js)
 
 Completed the lab and curious about what the tests are doing?
 The tests are written in Javascript.  Take a look under the hood!
@@ -337,25 +356,28 @@ The tests are written in Javascript.  Take a look under the hood!
 
 ### Objects
 
--   [Object Basics](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Basics)
--   [Working with Objects](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_Objects)
--   [Objects JS Info](https://javascript.info/object)
+- [Object Basics](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Basics)
+- [Working with Objects](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_Objects)
+- [Objects JS Info](https://javascript.info/object)
 
 ### Arrays
--   [Arrays Mozilla](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)
--   [Arrays JS Info](https://javascript.info/array)
--   [Eloquent JS: Objects and Arrays](https://eloquentjavascript.net/04_data.html)
+
+- [Arrays Mozilla](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)
+- [Arrays JS Info](https://javascript.info/array)
+- [Eloquent JS: Objects and Arrays](https://eloquentjavascript.net/04_data.html)
 
 ### Functions
--   [Functions Mozilla](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions)
--   [Function Basics JS Info](https://javascript.info/function-basics)
+
+- [Functions Mozilla](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions)
+- [Function Basics JS Info](https://javascript.info/function-basics)
 
 ### Primitive vs Reference Types & Memory
-- 	[Explaining Value vs Reference](https://codeburst.io/explaining-value-vs-reference-in-javascript-647a975e12a0)
--   [Copying by Reference JS Info](https://javascript.info/object#copying-by-reference)
+
+- [Explaining Value vs Reference](https://codeburst.io/explaining-value-vs-reference-in-javascript-647a975e12a0)
+- [Copying by Reference JS Info](https://javascript.info/object#copying-by-reference)
 
 ## [License](LICENSE)
 
-1.  All content is licensed under a CC­BY­NC­SA 4.0 license.
-1.  All software code is licensed under GNU GPLv3. For commercial use or
+1. All content is licensed under a CC­BY­NC­SA 4.0 license.
+1. All software code is licensed under GNU GPLv3. For commercial use or
     alternative licensing, please contact legal@ga.co.
