@@ -6,7 +6,7 @@ Exercising the JavaScript Reference Types.
 
 ## Prerequisites
 
-- [ga-wdi-boston/js-basics](https://github.com/ga-wdi-boston/js-basics)
+- [ga-wdi-boston/js-basics](https://git.generalassemb.ly/ga-wdi-boston/js)
 
 ## Objectives
 
@@ -20,7 +20,7 @@ By the end of this, developers should be able to:
 
 ## Preparation
 
-1.[Fork and clone](https://github.com/ga-wdi-boston/meta/wiki/ForkAndClone)
+1.[Fork and clone](https://git.generalassemb.ly/ga-wdi-boston/meta/wiki/ForkAndClone)
   this repository.
 1. Create a new branch, `training`, for your work and change into it.
 1. Install dependencies with `npm install`.
@@ -347,7 +347,7 @@ grunt test
 ```
 
 Note: In order to run `grunt test`, remove the **x** before **describe** on
-**line 16** in [spec/lab.spec.js](https://github.com/ga-wdi-boston/js-reference-types/spec/lab.spec.js)
+**line 16** in [spec/lab.spec.js](https://git.generalassemb.ly/ga-wdi-boston/js-reference-types/blob/master/spec/lab.spec.js)
 
 Completed the lab and curious about what the tests are doing?
 The tests are written in Javascript.  Take a look under the hood!
