@@ -345,9 +345,6 @@ Test your solution to the lab using the command:
 grunt test
 ```
 
-Note: In order to run `grunt test`, remove the **x** before **describe** on
-**line 16** in [spec/lab.spec.js](https://git.generalassemb.ly/ga-wdi-boston/js-reference-types/blob/master/spec/lab.spec.js)
-
 Completed the lab and curious about what the tests are doing?
 The tests are written in Javascript.  Take a look under the hood!
 
