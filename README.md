@@ -6,7 +6,7 @@ Exercising the JavaScript Reference Types.
 
 ## Prerequisites
 
--   [ga-wdi-boston/js-basics](https://github.com/ga-wdi-boston/js-basics)
+-   [ga-wdi-boston/js](https://git.generalassemb.ly/ga-wdi-boston/js)
 
 ## Objectives
 
@@ -20,7 +20,7 @@ By the end of this, developers should be able to:
 
 ## Preparation
 
-1.  [Fork and clone](https://github.com/ga-wdi-boston/meta/wiki/ForkAndClone)
+1.  [Fork and clone](https://git.generalassemb.ly/ga-wdi-boston/meta/wiki/ForkAndClone)
     this repository.
 
 1.  Create a new branch, `training`, for your work and change into it.
@@ -135,37 +135,37 @@ const emptyDictionary = {}
 
 // Create an object literal with values
 const car = {
-  brand: 'Ford',
-  make: 'Mustang',
+  make: 'Ford',
+  model: 'Mustang',
   year: 1999
 }
 
 // Read value from an Object, use key
-car['brand'] // 'Ford'
-car.brand // 'Ford'
+car['make'] // 'Ford'
+car.make // 'Ford'
 
 // Update value in an Object, use key
-car.brand = 'Toyota'
-car // { brand: 'Toyota', make: 'Mustang', year: 1999 }
+car.make = 'Toyota'
+car // { make: 'Toyota', model: 'Mustang', year: 1999 }
 
 // Add value to an Object, use key
 car.topSpeed = 120
-car // { brand: 'Toyota', make: 'Mustang', year: 1999, topSpeed: 120 }
+car // { make: 'Toyota', model: 'Mustang', year: 1999, topSpeed: 120 }
 ```
 
 #### Code Along: Iterating through an Object
 
 ```js
 const car = {
-  brand: 'Ford',
-  make: 'Mustang',
+  make: 'Ford',
+  model: 'Mustang',
   year: 1999
 }
 
 // Individually print message for each property of object
-console.log(car.brand)
 console.log(car.make)
-console.log(car['year'])
+console.log(car.model)
+console.log(car['year']) // alternative syntax
 
 // Loop through object using key
 for (const key in car ){
@@ -328,7 +328,7 @@ Test your solution to the lab using the command:
 ```bash
 grunt test
 ```
-Note: In order to run `grunt test`, remove the **x** before **describe** on **line 16** in [spec/lab.spec.js](https://github.com/ga-wdi-boston/js-reference-types/spec/lab.spec.js)
+Note: In order to run `grunt test`, remove the **x** before **describe** on **line 16** in [spec/lab.spec.js](spec/lab.spec.js)
 
 Completed the lab and curious about what the tests are doing?
 The tests are written in Javascript.  Take a look under the hood!
