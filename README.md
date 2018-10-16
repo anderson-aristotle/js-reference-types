@@ -180,7 +180,7 @@ console.log(car.model)
 console.log(car['year'])
 
 // Loop through object using key
-for (const key in car ){
+for (const key in car){
   console.log(car[key])
 }
 ```
@@ -190,7 +190,6 @@ for (const key in car ){
 We'll be using the file `lib/collections.js` as a starting point to:
 
 - create a list of normalized words from a paragraph of text.
-
 - find the word frequencies (how many times does each unique word appear in
   the string).
 
@@ -228,7 +227,7 @@ What can we do with functions?
 Functions provide important parts of the building blocks of programs,
 abstraction and encapsulation.
 
-It is important to remember that console.log prints its argument to the
+It is important to remember that `console.log` prints its argument to the
 `console` (the terminal using node, the console area of the debug tools using
 chrome) but does not return a value. *THIS IS A COMMON POINT OF CONFUSION* I
 REPEAT, `console.log` does *not* return a value (it returns `undefined`).
